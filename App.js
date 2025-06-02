@@ -452,3 +452,96 @@
         mobileMenu.classList.toggle('hidden');
     })
                     
+//-------------------------------------------------------------------------
+<?php
+// Verifica se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // Recebe os dados do formulário
+    $name = strip_tags(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $message = trim($_POST["message"]);
+
+    // Verificação básica (podes personalizar)
+    if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Por favor, preenche todos os campos corretamente.";
+        exit;
+    }
+
+    // Define para onde o e-mail será enviado
+    $to = "teu-email@teudominio.com"; // ⛔️ TROCA para o teu e-mail verdadeiro
+
+    // Assunto do e-mail
+    $subject = "Nova mensagem de $name";
+
+    // Corpo do e-mail
+    $body = "Nome: $name\nEmail: $email\n\nMensagem:\n$message";
+
+    // Cabeçalhos
+    $headers = "From: $name <$email>";
+
+    // Envia o e-mail
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Mensagem enviada com sucesso!";
+    } else {
+        echo "Erro ao enviar a mensagem.";
+    }
+} else {
+    echo "Método de acesso inválido.";
+}
+if (mail($to, $subject, $body, $headers)) {
+    header("Location: thankyou.html");
+    exit;
+} else {
+    echo "Erro ao enviar a mensagem.";
+}
+?>
+  
+  
+  <!--Subscribe for cleaning tips and special offers -->
+  <?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Enviar e-mail para ti
+        $to = "teuemail@exemplo.com"; // coloca aqui o teu e-mail
+        $subject = "Nova subscrição na newsletter";
+        $message = "Novo subscritor: $email";
+        $headers = "From: noreply@teusite.com";
+
+        mail($to, $subject, $message, $headers);
+
+        // Redirecionar para página de sucesso
+        header("Location: obrigado.html");
+        exit();
+    } else {
+        echo "Endereço de e-mail inválido.";
+    }
+}
+?>
+  
+  //----------------subscribe
+  <?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Enviar e-mail para ti
+        $to = "teuemail@exemplo.com"; // <-- Substitui pelo teu email real
+        $subject = "Nova subscrição na newsletter";
+        $message = "Novo subscritor: $email";
+        $headers = "From: noreply@teusite.com";
+
+        // Envia o email
+        if (mail($to, $subject, $message, $headers)) {
+            header("Location: obrigado.html");
+            exit();
+        } else {
+            echo "Erro ao enviar o email. Tenta novamente.";
+        }
+    } else {
+        echo "Endereço de e-mail inválido.";
+    }
+}
+?>
