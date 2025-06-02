@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristine Panes - Instant Window Cleaning Quote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+  
+<body class="font-sans bg-gray-50">
+    <!-- Header with Video Background -->
+<header class="hero-container relative h-screen overflow-hidden">
+    <!-- Vídeo de fundo -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="https://files.catbox.moe/3k5rhb.mp4" type="video/mp4" />
+        O teu navegador não suporta vídeo em HTML5.
+    </video>
+
+    <!-- Camada escura por cima do vídeo -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 py-6 relative h-full z-10">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-sparkle text-2xl mr-2 text-white"></i>
+                <h1 class="text-2xl font-bold text-white">BrightView</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#services" class="hover:underline text-white">Services</a></li>
+                  
+                    <li><a href="#quote" class="hover:underline text-white">Get Quote</a></li>
+                    <li><a href="#contact" class="hover:underline text-white">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Botão mobile -->
+            <button id="mobileMenuBtn" class="md:hidden text-xl text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <nav id="mobileMenu" class="hidden md:hidden mt-4 bg-white rounded-lg shadow-lg p-4 fade-in">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#services" class="text-teal-700 hover:underline">Services</a></li>
+                
+                <li><a href="#quote" class="text-teal-700 hover:underline">Get Quote</a></li>
+                <li><a href="#contact" class="text-teal-700 hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Content... (restante igual ao teu código) -->
+            
+            <!-- Hero Content -->
+            <div class="hero-content flex flex-col justify-center items-center text-center h-full">
+                <div class="max-w-3xl">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">A Clear Difference in Every Pane, Every Time</h2>
+                    <p class="text-xl mb-8 text-white opacity-90">Transparent pricing. No surprises. Instant quotes.</p>
+                    <a href="#quote" class="bg-white text-teal-700 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 inline-block transform hover:scale-105">
+                        Get Instant Quote <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-16 flex flex-wrap justify-center gap-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-white text-2xl mr-2"></i>
+                        <span class="text-white">100% Satisfaction</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-white text-2xl mr-2"></i>
+                        <span class="text-white">Fully Insured</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-leaf text-white text-2xl mr-2"></i>
+                        <span class="text-white">Eco-Friendly</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-teal-600 text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Residential Cleaning</h3>
+                    <p>Perfect for homes of all sizes. We handle everything from bungalows to large detached houses with care and precision.</p>
+                </div>
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-teal-600 text-4xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Commercial Cleaning</h3>
+                    <p>Keep your business looking professional with our commercial window cleaning services for shops and offices.</p>
+                </div>
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-teal-600 text-4xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Specialty Services</h3>
+                    <p>Conservatories, skylights, and high-rise windows. We handle all the tricky jobs others avoid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator -->
+    <section id="quote" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Instant Quote Calculator</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="quote-box bg-white rounded-lg border border-gray-200 p-8 relative">
+                    <div class="price-badge bg-teal-600 text-white font-bold px-4 py-2 rounded-full shadow-lg hidden" id="priceBadge">
+                        £<span id="totalPrice">0</span>
+                    </div>
+                    
+                    <form id="quoteForm">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Left Column -->
+                            <div>
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-bold mb-2">Service Type</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" name="serviceType" value="residential" class="form-radio text-teal-600" checked>
+                                            <span class="ml-2">Residential</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" name="serviceType" value="commercial" class="form-radio text-teal-600">
+                                            <span class="ml-2">Commercial</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6" id="residentialType">
+                                    <label class="block text-gray-700 font-bold mb-2">Property Type</label>
+                                    <select class="block w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" name="propertyType">
+                                        <option value="bungalow" data-price="30">Bungalow/Terraced House</option>
+                                        <option value="semi" data-price="35">Semi-Detached House</option>
+                                        <option value="detached" data-price="40">Detached House</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-6 hidden" id="commercialType">
+                                    <label class="block text-gray-700 font-bold mb-2">Business Type</label>
+                                    <select class="block w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" name="businessType">
+                                        <option value="small" data-price="40">Small shop (up to 10 windows)</option>
+                                        <option value="medium" data-price="50">Medium shop/Office (11-20 windows)</option>
+                                        <option value="large" data-price="0">Large shop/Commercial building</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-bold mb-2">Number of Small Windows</label>
+                                    <input type="range" min="1" max="50" value="10" class="w-full mb-2" id="smallWindows">
+                                    <div class="flex justify-between">
+                                        <span>1</span>
+                                        <span id="smallWindowsValue">10</span>
+                                        <span>50+</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-bold mb-2">Number of Large Windows</label>
+                                    <input type="range" min="0" max="20" value="0" class="w-full mb-2" id="largeWindows">
+                                    <div class="flex justify-between">
+                                        <span>0</span>
+                                        <span id="largeWindowsValue">0</span>
+                                        <span>20+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Column -->
+                            <div>
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-bold mb-2">Number of Floors</label>
+                                    <input type="range" min="1" max="10" value="1" class="w-full mb-2" id="floors">
+                                    <div class="flex justify-between">
+                                        <span>1</span>
+                                        <span id="floorsValue">1</span>
+                                        <span>10+</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-bold mb-2">Access Difficulty</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" name="access" value="easy" class="form-radio text-teal-600" checked>
+                                            <span class="ml-2">Easy</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" name="access" value="difficult" class="form-radio text-teal-600">
+                                            <span class="ml-2">Difficult</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 font-bold mb-2">Additional Services</label>
+                                    <div class="space-y-2">
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="interior" class="form-checkbox text-teal-600">
+                                            <span class="ml-2">Include Interior Cleaning (+100%)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="firstClean" class="form-checkbox text-teal-600">
+                                            <span class="ml-2">First Clean (very dirty windows)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="conservatory" class="form-checkbox text-teal-600">
+                                            <span class="ml-2">Conservatory</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="skylights" class="form-checkbox text-teal-600">
+                                            <span class="ml-2">Skylights</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-teal-50 p-4 rounded-lg mb-6 relative">
+                                    <h4 class="font-bold text-teal-700 mb-2 flex items-center">
+                                        Estimated Price
+                                        <button type="button" id="priceInfoBtn" aria-label="Show pricing details" 
+                                            class="ml-2 text-teal-700 font-bold hover:text-teal-900 focus:outline-none">
+                                            *
+                                        </button>
+                                    </h4>
+                                    <div class="text-3xl font-bold text-teal-700">£<span id="estimatePrice">0</span></div>
+                                    <p class="text-sm text-gray-600 mt-1">This is an estimate. Final price may vary after inspection.</p>
+                                    
+                                    <div id="pricePopup" 
+                                        class="absolute top-full mt-4 bg-white border border-gray-300 rounded-lg shadow-xl p-8 text-gray-800 text-sm z-50 hidden"
+                                        style="max-height: 80vh; overflow-y: auto;">
+                                        <h5 class="font-bold mb-6 text-2xl text-teal-700 border-b pb-2">Transparent Pricing Details</h5>
+
+                                        <div class="mb-8">
+                                            <h6 class="font-bold mb-4 text-lg text-teal-700">Base Prices (Exterior, ground floor, easy access)</h6>
+                                            <div class="price-grid">
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold text-xl mb-4 text-teal-700">Residential</h4>
+                                                    <ul class="space-y-3">
+                                                        <li class="flex justify-between py-2 border-b"><span class="text-gray-700">Bungalow/Terraced House</span> <span class="font-bold text-teal-600">from £30</span></li>
+                                                        <li class="flex justify-between py-2 border-b"><span class="text-gray-700">Semi-Detached House</span> <span class="font-bold text-teal-600">from £35</span></li>
+                                                        <li class="flex justify-between py-2"><span class="text-gray-700">Detached House</span> <span class="font-bold text-teal-600">from £40</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold text-xl mb-4 text-teal-700">Commercial</h4>
+                                                    <ul class="space-y-3">
+                                                        <li class="flex justify-between py-2 border-b"><span class="text-gray-700">Small shop (up to 10 windows)</span> <span class="font-bold text-teal-600">from £40</span></li>
+                                                        <li class="flex justify-between py-2 border-b"><span class="text-gray-700">Medium shop/Office (11-20 windows)</span> <span class="font-bold text-teal-600">from £50</span></li>
+                                                        <li class="flex justify-between py-2"><span class="text-gray-700">Large shop/Commercial building</span> <span class="font-bold text-teal-600">Custom quote</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-8">
+                                            <h3 class="text-xl font-bold mb-6 text-teal-700 border-b pb-2">Add-ons (automatically calculated)</h3>
+                                            <div class="price-grid">
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold mb-3 text-teal-700">Extra Windows</h4>
+                                                    <p class="text-gray-700 mb-2">+£1-£2 per small window (above 10)</p>
+                                                    <p class="text-gray-700">+£3-£5 per large window</p>
+                                                </div>
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold mb-3 text-teal-700">Height</h4>
+                                                    <p class="text-gray-700">+£5-£10 per additional floor</p>
+                                                </div>
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold mb-3 text-teal-700">Difficult Access</h4>
+                                                    <p class="text-gray-700">+£5-£10 for obstacles like gardens, gates or blocked windows</p>
+                                                </div>
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold mb-3 text-teal-700">Interior Cleaning</h4>
+                                                    <p class="text-gray-700">+100% of exterior value</p>
+                                                </div>
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold mb-3 text-teal-700">Special Windows</h4>
+                                                    <p class="text-gray-700 mb-2">Conservatory: +£15-£60</p>
+                                                    <p class="text-gray-700">Skylights: +£5-£10 each</p>
+                                                </div>
+                                                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                                                    <h4 class="font-bold mb-3 text-teal-700">First Clean</h4>
+                                                    <p class="text-gray-700">+£5-£15 for very dirty windows</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-8 bg-teal-50 border-l-4 border-teal-500 p-6 rounded">
+                                            <h4 class="font-bold text-teal-700 mb-3 text-lg">Example Calculation</h4>
+                                            <p class="text-gray-700 mb-2"><span class="font-bold">House with:</span> 12 small windows, 2 floors, easy access, exterior only</p>
+                                            <p class="text-gray-700"><span class="font-bold">Calculation:</span> Base £30 + 2 windows £4 + 1 floor £5 = £39 (rounded to £40)</p>
+                                        </div>
+
+                                        <button type="button" id="closePopupBtn" 
+                                                class="mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded focus:outline-none transition duration-300">
+                                            Close Pricing Details
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <button type="button" id="calculateBtn" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300">
+                                    Book Your Service
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Booking Form (shown after calculation) -->
+                <div id="bookingForm" class="mt-8 bg-white rounded-lg border border-gray-200 p-8 hidden fade-in">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold">Book Your Service</h3>
+                        <div class="bg-teal-100 text-teal-800 px-4 py-2 rounded-full font-bold">
+                            Estimated Price: £<span id="bookingPrice">0</span>
+                        </div>
+                    </div>
+                    
+                    <form id="bookingFormDetails">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+                                <div id="fullNameError" class="error-message hidden">Please enter your full name</div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+                                <div id="emailError" class="error-message hidden">Please enter a valid email address</div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+                                <div id="phoneError" class="error-message hidden">Please enter a valid phone number</div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="postcode">Postcode</label>
+                                <input type="text" id="postcode" name="postcode" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+                                <div id="postcodeError" class="error-message hidden">Please enter a valid UK postcode</div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="address">Address</label>
+                                <input type="text" id="address" name="address" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+                                <div id="addressError" class="error-message hidden">Please enter your address</div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-2" for="preferredDate">Preferred Date</label>
+                                <input type="date" id="preferredDate" name="preferredDate" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required min="">
+                                <div id="dateError" class="error-message hidden">Please select a valid date</div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-gray-700 font-bold mb-2" for="specialInstructions">Special Instructions</label>
+                                <textarea id="specialInstructions" name="specialInstructions" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500 h-24"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 border-t border-gray-200 pt-6">
+                            <h4 class="font-bold text-lg mb-4">Service Summary</h4>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                        <p class="text-gray-600">Service Type:</p>
+                                        <p class="font-bold" id="summaryServiceType">Residential</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Property Type:</p>
+                                        <p class="font-bold" id="summaryPropertyType">Bungalow/Terraced House</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Small Windows:</p>
+                                        <p class="font-bold" id="summarySmallWindows">10</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Large Windows:</p>
+                                        <p class="font-bold" id="summaryLargeWindows">0</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Floors:</p>
+                                        <p class="font-bold" id="summaryFloors">1</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Access:</p>
+                                        <p class="font-bold" id="summaryAccess">Easy</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Additional Services:</p>
+                                    <p class="font-bold" id="summaryAdditionalServices">None</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 flex flex-col md:flex-row justify-between items-center">
+                            <div class="mb-4 md:mb-0">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" id="termsAgreement" name="termsAgreement" class="form-checkbox text-teal-600" required>
+                                    <span class="ml-2">I agree to the <a href="#" class="text-teal-600 hover:underline">terms and conditions</a></span>
+                                </label>
+                                <div id="termsError" class="error-message hidden">You must agree to the terms and conditions</div>
+                            </div>
+                            <button type="submit" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded focus:outline-none focus:shadow-outline transition duration-300">
+                                Confirm Booking
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-4">"Brightview did an amazing job on our Victorian terrace. The windows sparkle like never before!"</p>
+                    <p class="font-bold">- Sarah K., Worcester</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-4">"The instant quote calculator was spot on. No hidden fees and the team arrived right on time."</p>
+                    <p class="font-bold">- James T., Malvern</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-4">"Our office windows had years of grime. They look brand new now and the price was very reasonable."</p>
+                    <p class="font-bold">- Emma R., Droitwich</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                    <form action="sendmail.php" method="POST">
+    <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Name</label>
+        <input type="text" name="name" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Email</label>
+        <input type="email" name="email" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500" required>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Message</label>
+        <textarea name="message" class="w-full bg-gray-100 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:border-teal-500 h-32" required></textarea>
+    </div>
+    <button type="submit" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline transition duration-300">
+        Send Message
+    </button>
+</form>
+                  
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Our Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-teal-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Address</h4>
+                                <p> 
+80A Ruskin Avenue  
+Welling, London  
+DA16 3QQ  
+United Kingdom</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-teal-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Phone</h4>
+                                <p>07404603394</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-teal-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>hello@brightview.co.uk</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-teal-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Working Hours</h4>
+                                <p>Monday-Friday: 8am-6pm</p>
+                                <p>Saturday: 9am-4pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-teal-600 hover:text-teal-800 text-2xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-teal-600 hover:text-teal-800 text-2xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-teal-600 hover:text-teal-800 text-2xl"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Brightview</h3>
+                    <p>Professional window cleaning services with transparent pricing and exceptional results.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-teal-400">Residential Cleaning</a></li>
+                        <li><a href="#" class="hover:text-teal-400">Commercial Cleaning</a></li>
+                        <li><a href="#" class="hover:text-teal-400">Specialty Services</a></li>
+                        <li><a href="#" class="hover:text-teal-400">First Clean Discount</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-teal-400">Our Services</a></li>
+                        <li><a href="#pricing" class="hover:text-teal-400">Pricing</a></li>
+                        <li><a href="#quote" class="hover:text-teal-400">Get a Quote</a></li>
+                        <li><a href="#contact" class="hover:text-teal-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+    <p class="mb-2">Subscribe for cleaning tips and special offers.</p>
+    <form action="newsletter.php" method="POST" class="flex">
+        <input type="email" name="email" placeholder="Your email" class="bg-gray-700 text-white px-4 py-2 rounded-l focus:outline-none w-full" required>
+        <button type="submit" class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-r">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </form>
+</div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Brightview. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Virtual Assistant -->
+    <div id="assistant-container" class="chat-container hidden">
+        <!-- Chat Header -->
+        <div class="assistant-header text-white p-4 flex items-center">
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-3">
+                <i class="fas fa-spray-can text-teal-600 text-xl"></i>
+            </div>
+            <div>
+                <h2 class="font-bold">Pristine Pane Assistant</h2>
+                <p class="text-xs opacity-80">We're here to help with your window cleaning needs</p>
+            </div>
+            <button id="minimize-btn" class="ml-auto text-white opacity-70 hover:opacity-100">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="h-80 overflow-y-auto p-4 bg-gray-50 space-y-3">
+            <!-- Initial greeting -->
+            <div class="message-entering flex">
+                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
+                    <i class="fas fa-spray-can text-teal-600 text-sm"></i>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm max-w-xs">
+                    <p>Hello! 👋 I'm your Pristine Pane assistant. How can I help you with your window cleaning needs today?</p>
+                    <p class="text-xs text-gray-500 mt-1">Just now</p>
+                </div>
+            </div>
+            
+            <!-- Quick options -->
+            <div class="message-entering flex">
+                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
+                    <i class="fas fa-spray-can text-teal-600 text-sm"></i>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm max-w-xs">
+                    <p>Here are some quick options:</p>
+                    <div class="mt-2 space-y-2">
+                        <button class="quick-btn" data-question="Book a cleaning">📅 Book a cleaning</button>
+                        <button class="quick-btn" data-question="Pricing">💰 Pricing</button>
+                        <button class="quick-btn" data-question="Services">🧹 Our services</button>
+                        <button class="quick-btn" data-question="Contact">📞 Contact us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Typing indicator (hidden by default) -->
+        <div id="typing-indicator" class="hidden bg-gray-50 px-4 py-2">
+            <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
+                    <i class="fas fa-spray-can text-teal-600 text-sm"></i>
+                </div>
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Input -->
+        <div class="p-4 bg-white border-t border-gray-200 flex">
+            <input id="user-input" type="text" placeholder="Type your message..." 
+                   class="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+            <button id="send-btn" class="ml-2 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Minimized state (floating button) -->
+    <div id="minimized-chat" class="fixed bottom-4 right-4">
+        <button id="open-chat-btn" class="w-16 h-16 rounded-full bg-teal-600 text-white flex items-center justify-center shadow-lg hover:bg-teal-700 transition floating">
+            <i class="fas fa-comment-alt text-2xl"></i>
+        </button>
+    </div>
+  
+</body>
+  <!--formulario-->
+  
+</html>
